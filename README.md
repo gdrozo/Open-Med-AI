@@ -59,6 +59,7 @@ Open Med AI leverages **MedGemma 1.5** as the core of a sophisticated agentic re
 
 ---
 
-## 👥 Your Team
+## 👥 Team
 
 - **German David Rozo Cruz** - [Developer]
+
