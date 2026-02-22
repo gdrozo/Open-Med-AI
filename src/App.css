@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+main.dark {
+  --bg-color: #181818;
+  --bg-secondary: #1f1f1f;
+  --text-main: #ffffff;
+  --bg-highlight: #333;
+  --bg-dark: #121212;
+}
+
+main.light {
+  --bg-color: #f5f5f5;
+  --bg-secondary: #e0e0e0;
+  --text-main: #181818;
+  --bg-highlight: #d0d0d0;
+  --bg-dark: #eeeeee;
+}
+
+.bg-main {
+  background-color: var(--bg-color);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.text-main {
+  color: var(--text-main);
+}
+
+.hover\:text-main {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--text-main);
+    }
+  }
+}
+
+.group-hover\:text-main {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      color: var(--text-main);
+    }
+  }
+}
+
+.hover\:bg-highlight:hover {
+  background-color: var(--bg-highlight);
+}
+
+.hover\:bg-dark:hover {
+  background-color: var(--bg-dark);
+}
+
+.focus-within\:bg-highlight:focus-within {
+  background-color: var(--bg-highlight);
+}
+
+.border-highlight {
+  border-color: var(--bg-highlight);
+}
+
+/*--------------------------------------*/
+
+button {
+  @apply cursor-pointer;
+}
+
+/* 1. The container (the track) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* 2. The background of the scrollbar */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* 3. The draggable handle */
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+  border: 2px solid #1e1e1e; /* Creates a "floating" effect */
+}
+
+/* 4. Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  20% {
+    display: block;
+  }
+
+  21% {
+    opacity: 0;
+    display: none;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+
+  80% {
+    display: block;
+  }
+
+  81% {
+    opacity: 1;
+    display: block;
+  }
+
+  to {
+    opacity: 1;
+    display: block;
+  }
+}

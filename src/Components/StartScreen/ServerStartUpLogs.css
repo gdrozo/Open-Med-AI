@@ -1,0 +1,13 @@
+.in-and-out {
+  animation: in-and-out 1s ease-in-out var(--d) infinite;
+}
+
+@keyframes in-and-out {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
